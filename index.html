@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="style.css" />
-	<link rel="icon" type="image/svg+xml" href="/logo.png" />
-	<title>QR Code Generator - Buat QR Code dengan Cepat dan Mudah</title>
-	<meta name="title" content="QR Code Generator - Buat QR Code dengan Cepat dan Mudah" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single QR Code Generator</title>
+    <link rel="stylesheet" href="Multiple.css">
 </head>
-
 <body>
-	<div class="qr-container">
-		<div class="qr-heading">mpostAFA</div>
-		<section class="user-input">
-			<input type="text" name="input_text" id="input_text" class="qr-input" placeholder="Enter text or URL"
-				autocomplete="off" />
-			<button class="qr-button" type="submit">GENERATE</button>
-		</section>
-		<div class="qr-code" style="display: none"></div>
-		<a id="downloadLink" class="qr-download" style="display: none" download="qrcode.png">Download QR Code</a>
-	</div>
-	<button id="About"><img src="/avatar.png" alt="" /></button>
+    <div class="qr-container">
+        <h1 class="qr-heading">Single QR Code Generator</h1>
+        <section class="user-input">
+            <div id="input-container">
+                <div class="input-group">
+                    <!-- add list 1.... -->
+                    <input type="text" name="input_text" class="qr-input" placeholder="Enter text or URL" autocomplete="off">
+                    <button class="remove-btn" onclick="removeInput(this)">Remove</button>
+                </div>
+            </div>
+            <div class="button-group">
+                <button id="addInputBtn" class="qr-button">Add Another Input</button>
+                <button id="generateBtn" class="qr-button">Generate QR Code</button>
+            </div>
+        </section>
+        <div id="qr-codes-container" class="qr-codes-container"></div>
+    </div>
 
-	<script src="https://unpkg.com/@popperjs/core@2"></script>
-	<script src="https://unpkg.com/tippy.js@6"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-	<script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="Multiple.js"></script>
 </body>
-
 </html>
