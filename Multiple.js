@@ -35,7 +35,7 @@ document.getElementById("generateBtn").addEventListener("click", () => {
     let combinedText = '';
     inputElements.forEach(inputElement => {
         if (inputElement.value.trim() !== "") {
-            combinedText += inputElement.value.trim() + " | ";  // Menambahkan pemisah antara nilai input
+            combinedText += inputElement.value.trim() + " \n ";  // Menambahkan pemisah antara nilai input
         }
     });
 
